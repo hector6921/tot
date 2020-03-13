@@ -1,10 +1,16 @@
-import React, {Component} from 'react'
-import "./app"
+import React from 'react'
 
-Getlist = (props) => {
-var todo = props.todo;
-<ul>
-<li>{todo}</li>
-</ul>
-}
-export default Getlist;
+
+
+const GetList = (props) => {
+  console.log(props);
+return(
+
+    <ul>
+      <li key={props.index} >{props.todo} <button onClick={() => props.Delete(props.index)}>Delete</button></li>
+    </ul>
+);
+
+};
+
+export default GetList;
